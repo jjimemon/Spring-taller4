@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Search System</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   </head>
+   <body class="card-body">
+      <div class="card text-white bg-dark mb-3">
+         <div class="card-header">ALL Client</div>
+         <div class="card-body">
+            <table style="width:100%">
+               <tr>
+                  <th>IDCLIENT</th>
+                  <th>NAME</th>
+                  <th>DNI</th>
+                  <th></th>
+               </tr>
+			   <th:block th:each="client : ${client}">
+               <tr>
+                  <td th:text=" ${client.idClient}">
+                  <td th:text=" ${client.name} ">
+                  <td th:text = "${client.DNI}">
+                     <td> <form th:action = "@{ClientDelete}" method="post" >
+                     <button type="submit" id="btnDropClient" name="idClient" th:value="${client.idClient}">▼</button>
+                  </form>
+               </td>
+               </tr>
+			</th:block>
+            </table>
+         </div>
+      </div>
+      </div>
+   </body>
+</html>

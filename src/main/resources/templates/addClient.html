@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Search System</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+		<body class="card-body">
+		<div class="card text-white bg-dark mb-3">
+		  <div class="card-header">ADD Client</div>
+		  <div class="card-body">
+				<form th:action="@{../welcome}"  method="GET">
+					<div class="form-group">
+
+			  			<label for="inpCarRegistration">Name</label>
+			  			<input type="text" required="required" class="form-control" id="inpTclientRegistration" name="name" placeholder="Manuel">
+
+						<label for="inpCarRegistration">Lastname</label>
+			  			<input type="text" required="required" class="form-control" id="inpTclientRegistration" name="lastName" placeholder="Benitez">
+
+						<label for="inpCarRegistration">DNI</label>
+			  			<input type="text" required="required" class="form-control" id="inpTclientRegistration" name="DNI" placeholder="200...D">
+
+						<label for="inpCarRegistration">fecha de nacimiento </label>
+			  			<input type="text" required="required" class="form-control" id="inpTclientRegistration" name="fechaNacimiento" placeholder="[day/month/year]">
+
+					</div>
+					<button type="submit" name="btnCreateCar" class="btn btn-success">ADD</button>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>

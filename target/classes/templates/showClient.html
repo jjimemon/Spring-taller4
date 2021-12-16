@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>SYSTEM SEARCH</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+		<body class="card-body">
+		<div class="card text-white bg-dark mb-3">
+		  <div class="card-header">Clients.</div>
+		  <div class="card-body">
+				<form>
+					<div class="form-group">
+						<tr th:each="client: ${client} ">
+							<td th:text=" ${client.DNI} " >
+								<br><br>
+						</tr>
+					</div>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>
